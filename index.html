@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Kali Hub - موسوعة تعليمية عربية عن Kali Linux والأمن السيبراني">
-<title>Kali Hub | موسوعة Kali Linux</title>
+<meta name="description" content="KaliNova — موسوعة عربية تعليمية تفاعلية عن Kali Linux وLinux والأمن السيبراني">
+<title>KaliNova | موسوعة Kali Linux التفاعلية</title>
 <style>
 :root{
   --bg:#070a0d;--panel:#0d1217;--panel2:#111820;--text:#eef4f7;--muted:#9aa8b1;
@@ -135,6 +135,35 @@ footer{border-top:1px solid var(--border);padding:35px 0;color:var(--muted);font
 @media(max-width:850px){.dashboard{grid-template-columns:1fr}.glossary,.arch{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.glossary,.arch{grid-template-columns:1fr}.terminal-body{min-height:220px;font-size:12px}}
 
+
+/* ===== KALINOVA ULTRA POLISH ===== */
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;
+background-image:linear-gradient(rgba(114,214,0,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(114,214,0,.025) 1px,transparent 1px);
+background-size:40px 40px;mask-image:linear-gradient(to bottom,#000,transparent 75%);}
+.hero-content{animation:heroIn .8s ease both}
+@keyframes heroIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.glow-title{text-shadow:0 0 28px rgba(114,214,0,.18)}
+.awards-grid{display:grid;grid-template-columns:1fr;gap:16px}
+.award-main,.skill-panel{background:linear-gradient(135deg,rgba(114,214,0,.11),rgba(0,229,255,.04)),var(--panel);
+border:1px solid rgba(114,214,0,.22);border-radius:22px;padding:28px;position:relative;overflow:hidden}
+.award-main:after{content:"🏆";position:absolute;left:-8px;bottom:-28px;font-size:120px;opacity:.06;transform:rotate(-12deg)}
+.award-kicker{color:var(--gold);font-weight:900;font-size:13px}
+.award-title{font-size:32px;font-weight:900;margin:8px 0}
+.award-sub{color:var(--muted);max-width:650px}
+.medal{font-size:52px;filter:drop-shadow(0 0 16px rgba(255,209,102,.25))}
+.skills{display:grid;gap:14px;margin-top:16px}
+.skill{display:grid;grid-template-columns:130px 1fr 45px;gap:10px;align-items:center;font-size:13px}
+.skill-bar{height:9px;background:var(--panel2);border-radius:99px;overflow:hidden}
+.skill-bar i{display:block;height:100%;width:var(--w);background:linear-gradient(90deg,var(--accent),var(--accent3));border-radius:99px;animation:fill 1.1s ease both}
+@keyframes fill{from{width:0}}
+.stats-pro{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}
+.stat-pro{padding:17px;border:1px solid var(--border);background:var(--panel);border-radius:16px}
+.stat-pro b{font-size:24px;color:var(--accent);display:block}
+.stat-pro span{font-size:12px;color:var(--muted)}
+.terminal-badge{margin-right:8px;padding:4px 8px;border:1px solid rgba(114,214,0,.2);border-radius:999px;color:var(--accent2)}
+@media(max-width:850px){.awards-grid{grid-template-columns:1fr}.stats-pro{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.stats-pro{grid-template-columns:1fr}.skill{grid-template-columns:90px 1fr 35px}.award-title{font-size:25px}}
+
 </style>
 </head>
 <body>
@@ -142,7 +171,7 @@ footer{border-top:1px solid var(--border);padding:35px 0;color:var(--muted);font
   <div class="container nav" id="nav">
     <a class="logo" href="#home"><span class="logo-mark"></span><span>Kali<span class="gradient">Hub</span></span></a>
     <nav>
-      <a href="#about">عن Kali</a><a href="#learn">التعلّم</a><a href="#tools">الأدوات</a><a href="#commands">الأوامر</a><a href="#dashboard">لوحتي</a><a href="#quiz">اختبار</a><a href="#game">التسلية</a>
+      <a href="#about">عن Kali</a><a href="#learn">التعلّم</a><a href="#tools">الأدوات</a><a href="#commands">الأوامر</a><a href="#dashboard">لوحتي</a><a href="#quiz">اختبار</a><a href="#awards">الإنجازات</a><a href="#game">التسلية</a>
     </nav>
     <div class="actions">
       <button class="icon-btn" id="themeBtn" title="تبديل الوضع">☀️</button>
@@ -256,7 +285,7 @@ ls --help</div></article>
  <div class="container">
   <div class="section-head"><div><h2>🖥️ Terminal تعليمي</h2><p>محاكاة داخل الصفحة لأوامر Linux الآمنة. لا تنفذ أوامر على جهازك.</p></div></div>
   <div class="terminal-panel">
-   <div class="terminal-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="terminal-title">kali@kalinova: ~</span></div>
+   <div class="terminal-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="terminal-title">kali@kalinova: ~ <span class="terminal-badge">SIMULATION</span></span></div>
    <div class="terminal-body" id="terminalBody">
     <div class="term-line">KaliNova educational terminal</div>
     <div class="term-line">اكتب أمرًا من الأزرار بالأسفل للتجربة.</div>
@@ -323,6 +352,30 @@ ls --help</div></article>
    <details><summary>هل يمكنني تجربة الأمن السيبراني بأمان؟</summary><p>نعم، استخدم مختبرات تعليمية وأجهزة افتراضية تملكها، ولا تختبر أنظمة الآخرين دون إذن.</p></details>
   </div>
  </div>
+</section>
+
+
+<section id="awards" class="reveal">
+  <div class="container">
+    <div class="section-head">
+      <div><h2>🏆 الجوائز والإنجازات</h2><p>مساحة إنجازات شخصية داخل KaliNova — محفوظة محليًا في المتصفح.</p></div>
+    </div>
+    <div class="awards-grid">
+      <article class="award-main">
+        <div class="medal">🏅</div>
+        <div class="award-kicker">KALINOVA EXCELLENCE AWARD</div>
+        <div class="award-title glow-title">جائزة التميّز في التعلّم 🔥</div>
+        <p class="award-sub">شهادة تقديرية رقمية لإكمال مسار التعلّم وبناء أساس قوي في Linux والشبكات ومفاهيم الأمن السيبراني.</p>
+        <div class="stats-pro">
+          <div class="stat-pro"><b>4</b><span>مراحل التعلّم</span></div>
+          <div class="stat-pro"><b>9</b><span>مصطلحات أساسية</span></div>
+          <div class="stat-pro"><b>6</b><span>أدوات مشروحة</span></div>
+          <div class="stat-pro"><b>3</b><span>أسئلة اختبار</span></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
 </section>
 
 <section id="game">
